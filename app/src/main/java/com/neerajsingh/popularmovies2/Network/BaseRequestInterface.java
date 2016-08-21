@@ -1,8 +1,9 @@
 package com.neerajsingh.popularmovies2.Network;
 
-import com.neerajsingh.popularmovies.Config;
-import com.neerajsingh.popularmovies.Data.GenresList;
-import com.neerajsingh.popularmovies.Data.MovieList;
+
+import com.neerajsingh.popularmovies2.Config;
+import com.neerajsingh.popularmovies2.Data.GenresList;
+import com.neerajsingh.popularmovies2.Data.MovieList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

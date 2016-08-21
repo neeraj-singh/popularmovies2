@@ -2,7 +2,8 @@ package com.neerajsingh.popularmovies2.Network;
 
 import android.app.Application;
 
-import com.neerajsingh.popularmovies.Utils;
+import com.neerajsingh.popularmovies2.Utils;
+
 
 /**
  * Created by neeraj.singh on 28/04/16.
@@ -27,4 +28,5 @@ public class PopularMoviesApplication extends Application {
     public static BaseRequestInterface getBaseRequestInterface() {
         return baseRequestInterface;
     }
+
 }

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/text_title"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/genre"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/genre_height"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/left_margin"
+        android:layout_marginRight="@dimen/right_margin"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="italic|bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_margin"
+            android:layout_marginRight="@dimen/right_margin_half"
+            android:layout_marginTop="@dimen/top_margin">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/image_width_detail"
+                android:layout_height="@dimen/image_height_detail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/left_margin" />
+
+            <TextView
+                android:id="@+id/releaseText"
+                style="@style/TextDetails"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/release_date" />
+
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_below="@id/releaseText"
+                android:layout_marginLeft="@dimen/left_margin"
+                android:layout_marginTop="@dimen/top_big_margin"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_big" />
+
+            <TextView
+                android:id="@+id/ratingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/release_date"
+                android:layout_alignStart="@+id/release_date"
+                android:layout_below="@+id/release_date"
+                android:layout_marginTop="@dimen/top_margin_16"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Rating" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ratingText"
+                android:layout_alignStart="@+id/ratingText"
+                android:layout_below="@+id/ratingText"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_big" />
+
+            <TextView
+                android:id="@+id/vote_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rating"
+                android:layout_alignStart="@+id/rating"
+                android:layout_below="@+id/rating"
+                android:fontFamily="sans-serif-condensed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_regular" />
+
+            <ImageView
+                android:id="@+id/favIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/favorite" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="@dimen/top_margin"
+            android:alpha="0.2"
+            android:background="@color/black" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/bottom_margin"
+            android:layout_marginLeft="@dimen/left_margin"
+            android:layout_marginRight="@dimen/right_margin"
+            android:layout_marginTop="@dimen/top_margin"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/movie_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingMultiplier="1" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
