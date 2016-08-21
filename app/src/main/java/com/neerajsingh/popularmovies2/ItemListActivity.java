@@ -274,5 +274,10 @@ public class ItemListActivity extends AppCompatActivity implements NavigationInt
         outState.putSerializable("State",state);
         super.onSaveInstanceState(outState);
     }
+
+    public void retryNetworkCall(View view){
+        setupRecyclerView();
+    }
+
 }
 
